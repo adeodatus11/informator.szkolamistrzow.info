@@ -25,7 +25,7 @@ const description = "Informacja o Międzynarodowym Badaniu Kompetencji Społeczn
 
   <div class="container article-layout sses-layout">
     <article class="article-body">
-      <p class="article-intro">Szanowni Państwo, poniżej wyjaśniamy, na czym badanie polega i o co prosimy. Udział jest dobrowolny i wymaga zgody rodzica lub opiekuna prawnego.</p>
+      <p class="article-intro">Szanowni Państwo, poniżej wyjaśniamy, na czym badanie polega i o co prosimy. Bardzo prosimy o wyrażenie zgody na udział dziecka w badaniu oraz o dostarczenie podpisanej deklaracji do sekretariatu dyrektora szkoły.</p>
 
       <h2>Czym jest badanie SSES</h2>
 
@@ -52,7 +52,7 @@ const description = "Informacja o Międzynarodowym Badaniu Kompetencji Społeczn
 
       <h2>Dlaczego prosimy o zgodę</h2>
 
-      <p>Zgodnie z polskim prawem udział małoletniego ucznia w badaniu wymaga zgody rodzica lub opiekuna prawnego. Udział jest dobrowolny. Organizatorzy zaznaczają jednak, że warunkiem trafności wniosków z badania jest udział wszystkich wylosowanych uczniów, dlatego bardzo prosimy o wyrażenie zgody.</p>
+      <p>Zgodnie z polskim prawem udział małoletniego ucznia w badaniu wymaga zgody rodzica lub opiekuna prawnego. Warunkiem trafności wniosków z badania jest udział wszystkich wylosowanych uczniów, dlatego bardzo prosimy o wyrażenie zgody na udział Państwa dziecka.</p>
 
       <h2>Poufność i dane osobowe</h2>
 
@@ -69,13 +69,15 @@ const description = "Informacja o Międzynarodowym Badaniu Kompetencji Społeczn
 
       <h2>Co trzeba zrobić</h2>
 
+      <p>Bardzo prosimy o wyrażenie zgody na udział dziecka w badaniu i o to, aby dziecko dostarczyło podpisaną deklarację do sekretariatu dyrektora szkoły.</p>
+
       <ol class="plain-list">
         <li>Zapoznać się z listem IBE PIB i klauzulą informacyjną (plik PDF poniżej).</li>
         <li>Wypełnić i podpisać <strong>Deklarację zgody na udział dziecka w badaniu SSES 2026</strong> (strona 2 pliku PDF): wpisać imię i nazwisko dziecka, datę i podpis rodzica lub opiekuna prawnego.</li>
         <li>
           {returnDeadline
-            ? <>Oddać podpisaną deklarację w <strong>sekretariacie dyrektora szkoły</strong> do <strong>{returnDeadline}</strong>.</>
-            : <>Oddać podpisaną deklarację w <strong>sekretariacie dyrektora szkoły</strong> jak najszybciej.</>}
+            ? <>Przekazać dziecku podpisaną deklarację, aby dostarczyło ją do <strong>sekretariatu dyrektora szkoły</strong> do <strong>{returnDeadline}</strong>.</>
+            : <>Przekazać dziecku podpisaną deklarację, aby dostarczyło ją do <strong>sekretariatu dyrektora szkoły</strong> jak najszybciej.</>}
         </li>
       </ol>
 

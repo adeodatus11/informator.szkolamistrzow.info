@@ -31,6 +31,9 @@ Tekst strony jest przepisem treści listu i klauzuli, bez dodatków merytoryczny
 
 ## Czego strona świadomie nie twierdzi
 
+- **Dobrowolności udziału.** Na prośbę szkoły (18 listopada 2026 r.) tekst strony i wiadomości prosi o zgodę i nie
+  akcentuje dobrowolności. Dobrowolność jest zapisana w klauzuli informacyjnej (pkt 8, strona 4 PDF-a), która jest
+  dołączona do strony i wiadomości; na pytanie rodzica trzeba odpowiedzieć zgodnie z nią.
 - **Daty badania.** List mówi tylko: listopad i grudzień bieżącego roku, w terminie uzgodnionym z dyrekcją.
 - **Procedury zwrotu deklaracji.** List mówi: „zwrócić do szkoły”. Oddanie deklaracji w sekretariacie dyrektora
   jest decyzją szkoły (18 listopada 2026 r.). Dane sekretariatu (adres, telefon, e-mail) są takie jak w stopce serwisu
@@ -50,7 +53,7 @@ nasza szkoła została wylosowana do udziału w Międzynarodowym Badaniu Kompete
 
 Badanie odbędzie się w szkole [DATA] w czasie lekcji. Uczniowie rozwiążą na komputerze zadania i ankietę dotyczącą m.in. współpracy, empatii, wytrwałości i doświadczeń szkolnych. Odpowiedzi są poufne: nie zobaczą ich ani nauczyciele, ani dyrekcja.
 
-Udział dziecka jest dobrowolny i wymaga zgody rodzica. Prosimy o podpisanie deklaracji zgody i oddanie jej w sekretariacie dyrektora szkoły do [TERMIN].
+Bardzo prosimy o wyrażenie zgody na udział dziecka w badaniu: o podpisanie deklaracji zgody i o to, aby dziecko dostarczyło ją do sekretariatu dyrektora szkoły do [TERMIN].
 
 Szczegóły badania, informacja o danych osobowych i deklaracja do pobrania:
 [LINK DO STRONY: https://informator.szkolamistrzow.info/sses-2026/]

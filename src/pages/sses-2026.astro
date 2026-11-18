@@ -6,7 +6,7 @@ import { sitePath } from "../lib/paths";
 // Do uzupełnienia przez szkołę. Puste pole = strona pokazuje ogólne sformułowanie albo pomija wiersz.
 const surveyDate = ""; // np. "środę 25 listopada 2026 r."
 const returnDeadline = ""; // np. "poniedziałku 23 listopada 2026 r."
-const schoolContact = ""; // np. "Imię Nazwisko, funkcja, e-mail lub numer wewnętrzny"
+const schoolContact = ""; // opcjonalnie: osoba do kontaktu w szkole, np. "Imię Nazwisko, funkcja, e-mail"
 
 const pdfPath = sitePath("/documents/sses-2026/list-i-deklaracja-zgody-rodzic.pdf");
 
@@ -25,7 +25,7 @@ const description = "Informacja o Międzynarodowym Badaniu Kompetencji Społeczn
 
   <div class="container article-layout sses-layout">
     <article class="article-body">
-      <p class="article-intro">Szanowni Państwo, poniżej wyjaśniamy, na czym badanie polega i o co prosimy. Udział jest dobrowolny i wymaga zgody rodzica lub opiekuna prawnego.</p>
+      <p class="article-intro">Szanowni Państwo, poniżej wyjaśniamy, na czym badanie polega i o co prosimy. Bardzo prosimy o wyrażenie zgody na udział dziecka w badaniu oraz o dostarczenie podpisanej deklaracji do sekretariatu dyrektora szkoły.</p>
 
       <h2>Czym jest badanie SSES</h2>
 
@@ -52,7 +52,7 @@ const description = "Informacja o Międzynarodowym Badaniu Kompetencji Społeczn
 
       <h2>Dlaczego prosimy o zgodę</h2>
 
-      <p>Zgodnie z polskim prawem udział małoletniego ucznia w badaniu wymaga zgody rodzica lub opiekuna prawnego. Udział jest dobrowolny. Organizatorzy zaznaczają jednak, że warunkiem trafności wniosków z badania jest udział wszystkich wylosowanych uczniów, dlatego bardzo prosimy o wyrażenie zgody.</p>
+      <p>Zgodnie z polskim prawem udział małoletniego ucznia w badaniu wymaga zgody rodzica lub opiekuna prawnego. Warunkiem trafności wniosków z badania jest udział wszystkich wylosowanych uczniów, dlatego bardzo prosimy o wyrażenie zgody na udział Państwa dziecka.</p>
 
       <h2>Poufność i dane osobowe</h2>
 
@@ -69,13 +69,15 @@ const description = "Informacja o Międzynarodowym Badaniu Kompetencji Społeczn
 
       <h2>Co trzeba zrobić</h2>
 
+      <p>Bardzo prosimy o wyrażenie zgody na udział dziecka w badaniu i o to, aby dziecko dostarczyło podpisaną deklarację do sekretariatu dyrektora szkoły.</p>
+
       <ol class="plain-list">
         <li>Zapoznać się z listem IBE PIB i klauzulą informacyjną (plik PDF poniżej).</li>
         <li>Wypełnić i podpisać <strong>Deklarację zgody na udział dziecka w badaniu SSES 2026</strong> (strona 2 pliku PDF): wpisać imię i nazwisko dziecka, datę i podpis rodzica lub opiekuna prawnego.</li>
         <li>
           {returnDeadline
-            ? <>Oddać podpisaną deklarację wychowawcy klasy do <strong>{returnDeadline}</strong>.</>
-            : <>Oddać podpisaną deklarację wychowawcy klasy jak najszybciej.</>}
+            ? <>Przekazać dziecku podpisaną deklarację, aby dostarczyło ją do <strong>sekretariatu dyrektora szkoły</strong> do <strong>{returnDeadline}</strong>.</>
+            : <>Przekazać dziecku podpisaną deklarację, aby dostarczyło ją do <strong>sekretariatu dyrektora szkoły</strong> jak najszybciej.</>}
         </li>
       </ol>
 
@@ -87,7 +89,11 @@ const description = "Informacja o Międzynarodowym Badaniu Kompetencji Społeczn
       <h2>Kontakt</h2>
 
       <dl class="contact-list">
-        {schoolContact && <div><dt>W szkole</dt><dd>{schoolContact}</dd></div>}
+        <div>
+          <dt>W szkole: sekretariat</dt>
+          <dd>ul. Jana Władysława Dawida 5, 50-527 Wrocław · <a href="tel:+48717986934"><Phone size={16} aria-hidden="true" /> 71 798 69 34, wew. 100</a> · <a href="mailto:sekretariat.zsz5@wroclawskaedukacja.pl"><Mail size={16} aria-hidden="true" /> sekretariat.zsz5@wroclawskaedukacja.pl</a></dd>
+        </div>
+        {schoolContact && <div><dt>Osoba do kontaktu w szkole</dt><dd>{schoolContact}</dd></div>}
         <div>
           <dt>Realizator badania w szkołach: firma Danae</dt>
           <dd><a href="mailto:badanie.sses@danae.com.pl"><Mail size={16} aria-hidden="true" /> badanie.sses@danae.com.pl</a> · <a href="tel:+48583501502"><Phone size={16} aria-hidden="true" /> 58 350 15 02 wewn. 2</a></dd>

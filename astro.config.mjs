@@ -5,7 +5,7 @@ export default defineConfig({
   site: "https://informator.szkolamistrzow.info",
   base: "/",
   output: "static",
-  integrations: [sitemap({ filter: (page) => !page.endsWith(".ics") && !new URL(page).pathname.replace(/\/$/, "").endsWith("/hbsc-2026") })],
+  integrations: [sitemap({ filter: (page) => !page.endsWith(".ics") && !["/hbsc-2026", "/sses-2026"].some((hidden) => new URL(page).pathname.replace(/\/$/, "").endsWith(hidden)) })],
   redirects: {
     "/dzialania-szkoly": "/aktualnosci",
     "/dzialania-szkoly/higiena-cyfrowa": "/aktualnosci/higiena-cyfrowa",

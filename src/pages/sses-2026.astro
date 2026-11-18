@@ -1,0 +1,183 @@
+---
+import { Download, ExternalLink, FileText, Mail, Phone } from "lucide-astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { sitePath } from "../lib/paths";
+
+// Do uzupełnienia przez szkołę. Puste pole = strona pokazuje ogólne sformułowanie albo pomija wiersz.
+const surveyDate = ""; // np. "środę 25 listopada 2026 r."
+const returnDeadline = ""; // np. "poniedziałku 23 listopada 2026 r."
+const schoolContact = ""; // np. "Imię Nazwisko, funkcja, e-mail lub numer wewnętrzny"
+
+const pdfPath = sitePath("/documents/sses-2026/list-i-deklaracja-zgody-rodzic.pdf");
+
+const title = "Badanie SSES 2026: informacja dla rodziców wylosowanych uczniów";
+const description = "Informacja o Międzynarodowym Badaniu Kompetencji Społeczno-Emocjonalnych SSES 2026: na czym polega, jak chronione są dane i jak przekazać zgodę na udział dziecka.";
+---
+
+<BaseLayout title={`${title} | Strefa Ucznia ZSZ5`} description={description} noindex>
+  <header class="topic-hero tone-blue">
+    <div class="container">
+      <p class="eyebrow">Dla rodziców wylosowanych uczniów · SSES 2026</p>
+      <h1>{title}</h1>
+      <p class="lead">Nasza szkoła została wylosowana do udziału w międzynarodowym badaniu kompetencji społeczno-emocjonalnych. Jeśli otrzymali Państwo link do tej strony przez dziennik elektroniczny, Państwa dziecko znalazło się w grupie uczniów zaproszonych do badania.</p>
+    </div>
+  </header>
+
+  <div class="container article-layout sses-layout">
+    <article class="article-body">
+      <p class="article-intro">Szanowni Państwo, poniżej wyjaśniamy, na czym badanie polega i o co prosimy. Udział jest dobrowolny i wymaga zgody rodzica lub opiekuna prawnego.</p>
+
+      <h2>Czym jest badanie SSES</h2>
+
+      <p>SSES (Survey on Social and Emotional Skills) to międzynarodowe badanie zainicjowane przez Organizację Współpracy Gospodarczej i Rozwoju (OECD). Biorą w nim udział szkoły, nauczyciele i uczniowie z kilkunastu krajów świata.</p>
+
+      <p>W Polsce badanie prowadzi Instytut Badań Edukacyjnych - Państwowy Instytut Badawczy (IBE PIB) na zlecenie Ministerstwa Edukacji Narodowej. Pracę w szkołach wykonuje firma Danae.</p>
+
+      <h2>Czego dotyczy</h2>
+
+      <p>Badanie sprawdza, jak kształtują się kompetencje społeczno-emocjonalne uczniów w wieku 10 i 15 lat oraz jakie czynniki i praktyki szkolne sprzyjają ich rozwojowi. Chodzi m.in. o wytrwałość, ciekawość, odpowiedzialność, empatię, współpracę i regulację emocji. Wyniki pokażą, jak polski system edukacji wypada na tle systemów z innych krajów.</p>
+
+      <h2>Jak wygląda badanie</h2>
+
+      <ul class="plain-list">
+        <li>
+          {surveyDate
+            ? <>Odbędzie się w naszej szkole, w godzinach lekcyjnych, w <strong>{surveyDate}</strong>.</>
+            : <>Odbędzie się w naszej szkole, w godzinach lekcyjnych, w listopadzie i grudniu 2026 r., w terminie uzgodnionym z dyrekcją. Dokładną datę podamy w wiadomości w dzienniku.</>}
+        </li>
+        <li>Uczniowie rozwiązują na komputerach zadania i odpowiadają na pytania o swoje kompetencje społeczno-emocjonalne, doświadczenia szkolne, sposób spędzania wolnego czasu i plany na przyszłość.</li>
+        <li>Uczniowie we wszystkich krajach biorących udział w badaniu odpowiadają na te same pytania.</li>
+        <li>Każdy uczestnik otrzyma drobny upominek w podziękowaniu.</li>
+      </ul>
+
+      <h2>Dlaczego prosimy o zgodę</h2>
+
+      <p>Zgodnie z polskim prawem udział małoletniego ucznia w badaniu wymaga zgody rodzica lub opiekuna prawnego. Udział jest dobrowolny. Organizatorzy zaznaczają jednak, że warunkiem trafności wniosków z badania jest udział wszystkich wylosowanych uczniów, dlatego bardzo prosimy o wyrażenie zgody.</p>
+
+      <h2>Poufność i dane osobowe</h2>
+
+      <ul class="plain-list">
+        <li><strong>Odpowiedzi dziecka są poufne.</strong> Ani nauczyciele, ani dyrekcja szkoły nie będą mieli wglądu w odpowiedzi konkretnego ucznia.</li>
+        <li>Wyniki są prezentowane wyłącznie w formie zbiorczych zestawień statystycznych.</li>
+        <li>IBE PIB i OECD są współadministratorami danych badawczych. OECD otrzymuje dane bez imion i nazwisk uczestników, tylko z identyfikatorem badawczym. Dane rodzica związane ze zgodą nie są przekazywane OECD.</li>
+        <li>Po uzyskaniu zgody szkoła przekaże do badania także oceny semestralne ucznia.</li>
+        <li>Dane, które pozwalają powiązać odpowiedzi z konkretnym uczniem, zostaną trwale usunięte nie później niż do 30 czerwca 2027 r.</li>
+        <li>Pytania o dane osobowe można kierować do Inspektora Ochrony Danych IBE PIB: <a href="mailto:iod@ibe.edu.pl">iod@ibe.edu.pl</a>.</li>
+      </ul>
+
+      <p>Pełna klauzula informacyjna RODO jest w pliku PDF poniżej, na stronach 3-4.</p>
+
+      <h2>Co trzeba zrobić</h2>
+
+      <ol class="plain-list">
+        <li>Zapoznać się z listem IBE PIB i klauzulą informacyjną (plik PDF poniżej).</li>
+        <li>Wypełnić i podpisać <strong>Deklarację zgody na udział dziecka w badaniu SSES 2026</strong> (strona 2 pliku PDF): wpisać imię i nazwisko dziecka, datę i podpis rodzica lub opiekuna prawnego.</li>
+        <li>
+          {returnDeadline
+            ? <>Oddać podpisaną deklarację wychowawcy klasy do <strong>{returnDeadline}</strong>.</>
+            : <>Oddać podpisaną deklarację wychowawcy klasy jak najszybciej.</>}
+        </li>
+      </ol>
+
+      <p class="download-row">
+        <a class="button primary" href={pdfPath} target="_blank" rel="noreferrer"><Download size={18} aria-hidden="true" /> Pobierz list do rodziców i deklarację zgody (PDF)</a>
+      </p>
+      <p class="file-note"><FileText size={16} aria-hidden="true" /> 4 strony: list IBE PIB, deklaracja zgody do wydrukowania, klauzula informacyjna RODO.</p>
+
+      <h2>Kontakt</h2>
+
+      <dl class="contact-list">
+        {schoolContact && <div><dt>W szkole</dt><dd>{schoolContact}</dd></div>}
+        <div>
+          <dt>Realizator badania w szkołach: firma Danae</dt>
+          <dd><a href="mailto:badanie.sses@danae.com.pl"><Mail size={16} aria-hidden="true" /> badanie.sses@danae.com.pl</a> · <a href="tel:+48583501502"><Phone size={16} aria-hidden="true" /> 58 350 15 02 wewn. 2</a></dd>
+        </div>
+        <div>
+          <dt>Instytut Badań Edukacyjnych - PIB</dt>
+          <dd><a href="mailto:sses@ibe.edu.pl"><Mail size={16} aria-hidden="true" /> sses@ibe.edu.pl</a> · <a href="tel:+48508983041"><Phone size={16} aria-hidden="true" /> 508 983 041</a></dd>
+        </div>
+        <div>
+          <dt>Więcej informacji o badaniu</dt>
+          <dd><a href="https://ibe.edu.pl/pl/bm/SSES" target="_blank" rel="noreferrer">ibe.edu.pl/pl/bm/SSES <ExternalLink size={15} aria-hidden="true" /></a></dd>
+        </div>
+      </dl>
+
+      <p class="article-closing">Dziękujemy za pomoc i zaufanie.<br />Dyrekcja Zespołu Szkół Zawodowych nr 5 we Wrocławiu</p>
+
+      <p class="source-note">Informacje na tej stronie opracowano na podstawie listu Instytutu Badań Edukacyjnych - PIB do rodziców, deklaracji zgody i klauzuli informacyjnej (plik PDF powyżej). Jeśli informacje na stronie różnią się od dokumentów organizatora, obowiązują dokumenty organizatora. Badanie w Polsce jest realizowane w ramach projektu „Przygotowanie i realizacja międzynarodowych badań edukacyjnych w obszarze kompetencji kluczowych” (FERS.01.04-IP.05-0016/23), współfinansowanego ze środków europejskich w ramach Programu Fundusze Europejskie dla Rozwoju Społecznego (FERS).</p>
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .sses-layout {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 780px;
+  }
+
+  .plain-list {
+    margin: 16px 0 0;
+    padding-left: 22px;
+    font-size: 1.05rem;
+  }
+
+  .plain-list li + li {
+    margin-top: 10px;
+  }
+
+  .article-body .download-row {
+    margin-top: 24px;
+  }
+
+  .article-body .file-note {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
+
+  .contact-list {
+    display: grid;
+    gap: 10px;
+    margin: 18px 0 0;
+  }
+
+  .contact-list > div {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--paper);
+    padding: 14px 18px;
+  }
+
+  .contact-list dt {
+    font-weight: 800;
+  }
+
+  .contact-list dd {
+    margin: 4px 0 0;
+  }
+
+  .contact-list a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    overflow-wrap: anywhere;
+  }
+
+  .article-body .article-closing {
+    margin-top: 32px;
+    font-size: 1.16rem;
+    font-weight: 650;
+  }
+
+  .article-body .source-note {
+    margin-top: 40px;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+</style>
